@@ -1,0 +1,96 @@
+/* Estilos del Header - Visual Core Digital */
+
+.navbar {
+  background-color: #002b5c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; /* Quitamos el 6% para que no choque con el diseño de 1200px */
+  height: 95px;
+}
+
+/* Contenedor flexible para alinear icono y texto */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+  height: 100%;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff; /* BLANCO para que resalte sobre el fondo azul oscuro */
+  letter-spacing: -0.5px;
+}
+
+/* Icono circular del logo */
+.nav-logo-icon {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+/* Color base de los enlaces */
+.nav-link {
+  color: #e2e8f0; /* Un gris muy claro/blanco azulado para que sea legible */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 3. HOVER Y ESTADO ACTIVO */
+.nav-link:hover {
+  color: #ffffff; /* Brilla a blanco total al pasar el mouse */
+}
+
+/* ESTILO CUANDO LA PÁGINA ESTÁ ACTIVA */
+.nav-link.active {
+  color: #00A3E0 !important; /* Mantenemos tu celeste de marca */
+  font-weight: 700;
+}
+
+/* Línea sutil debajo del enlace activo (opcional, queda muy profesional) */
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background-color: #00A3E0;
+  border-radius: 2px;
+}
+
+
+/* Color celeste para la palabra "Digital" */
+.title-highlight {
+  color: #00A3E0; 
+}
+
+.btn-contact {
+  background-color: #00A3E0; /* El celeste brillante para que resalte sobre el azul oscuro */
+  color: white !important;    /* Forzamos el texto blanco */
+  border: none;
+  padding: 10px 24px;         /* Ajuste de tamaño para el header */
+  border-radius: 50px;        /* Bordes redondeados para un estilo moderno */
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;      /* Asegura que se comporte como bloque */
+  box-shadow: 0 4px 10px rgba(0, 163, 224, 0.2);
+}
+
+.btn-contact:hover {
+  background-color: #ffffff;  /* Al pasar el mouse cambia a blanco */
+  color: #002b5c !important;  /* El texto se vuelve azul oscuro */
+  transform: translateY(-2px);
+}

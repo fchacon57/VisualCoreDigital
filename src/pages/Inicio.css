@@ -1,0 +1,197 @@
+/* Inicio.css - Estilos exclusivos de la página de Inicio */
+
+.inicio-page {
+  width: 100%;
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 120px 0 80px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #002b5c;
+  font-weight: 800;
+  line-height: 1.1;
+  max-width: 900px;
+  margin: 0 auto 25px;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  color: #475569;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.cta-main {
+  background-color: #00A3E0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 163, 224, 0.3);
+}
+
+.cta-main:hover {
+  background-color: #0082b3;
+  transform: translateY(-2px);
+}
+
+/* TECH STACK */
+.tech-stack {
+  padding: 40px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.stack-title {
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.logos-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.tech-item {
+  font-weight: 600;
+  color: #64748b;
+  padding: 8px 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+}
+
+/* ABOUT SECTION */
+.about-brief {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about-brief h2 {
+  font-size: 2.5rem;
+  color: #002b5c;
+  margin-bottom: 25px;
+}
+
+.about-brief p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #475569;
+}
+
+/* SERVICES SECTION (GRID) */
+.services-section {
+  padding: 80px 0;
+  background-color: #f8fafc;
+}
+
+.services-section .container-general {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover { transform: translateY(-10px); }
+
+/* TRAINING SECTION */
+.training-section { padding: 100px 0; }
+.training-header { text-align: center; margin-bottom: 50px; }
+.training-header h2 { font-size: 2.5rem; color: #002b5c; margin: 15px 0; }
+
+.training-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.training-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.course-name { font-weight: 700; color: #0f172a; display: block; }
+.course-detail { font-size: 0.95rem; color: #64748b; margin-top: 5px; }
+
+/* Estilos para el bloque final de capacitaciones */
+.training-badge {
+  display: flex;             /* Activa el modo flexible */
+  align-items: center;       /* Centra icono y texto verticalmente */
+  justify-content: center;   /* CENTRA TODO EL CONTENIDO HORIZONTALMENTE */
+  gap: 15px;                 /* Espacio entre icono y texto */
+  margin: 50px auto 0;       /* Centra el bloque gris y da espacio arriba */
+  padding: 20px 30px;
+  background-color: #f1f5f9; /* Color de fondo gris suave */
+  border-radius: 12px;
+  width: fit-content;        /* El fondo solo envuelve al texto, no ocupa todo el ancho */
+  text-align: center;        /* Asegura que el texto interno esté centrado */
+}
+
+.training-badge span {
+  font-size: 1.1rem;
+  color: #002b5c;
+  line-height: 1.4;
+}
+
+.training-badge strong {
+  color: #00A3E0;            /* Resaltado en azul para coherencia */
+}
+
+/* Ajuste para que el icono no se vea pequeño */
+.training-badge svg {
+  color: #00A3E0;
+  flex-shrink: 0;
+}
+
+
+/* SECCIÓN DE MEDIAS QUERIES - Agrúpalo todo aquí al final */
+@media (max-width: 768px) {
+  /* Lo que ya tenías */
+  .hero-title { 
+    font-size: 2.5rem; 
+  }
+  
+  .training-list { 
+    grid-template-columns: 1fr; 
+  }
+
+  /* Lo nuevo para el badge de consultoría */
+  .training-badge {
+    flex-direction: column;  /* Icono arriba, texto abajo */
+    padding: 20px;
+    margin: 30px 20px 0;
+    text-align: center;      /* Asegura centrado de texto en móvil */
+  }
+  
+  .training-badge span {
+    font-size: 1rem;         /* Un poco más pequeña para pantallas chicas */
+  }
+}

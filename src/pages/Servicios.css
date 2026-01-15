@@ -1,0 +1,114 @@
+/* Servicios.css */
+
+.qh-page-container {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* Hero Sección */
+.qh-hero {
+  padding: 100px 0 60px;
+  text-align: center;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  width: 100%;
+}
+
+.qh-tag {
+  color: #00A3E0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.qh-hero h1 {
+  font-size: 3.5rem; /* Ajustado para igualar Inicio */
+  color: #002b5c;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.qh-description {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Estilos específicos de las filas de Servicios */
+.servicios-list-section {
+  padding: 60px 0 100px;
+}
+
+.servicio-row-clean {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 80px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.servicio-row-clean:last-child {
+  border-bottom: none;
+}
+
+.servicio-info-clean {
+  flex: 1.2;
+}
+
+.servicio-info-clean h2 {
+  font-size: 2.5rem;
+  color: #002b5c;
+  margin-bottom: 20px;
+}
+
+.servicio-number {
+  color: #00A3E0;
+  font-weight: 800;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.servicio-puntos-clean {
+  list-style: none;
+  padding: 0;
+}
+
+.servicio-puntos-clean li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.icon-blue {
+  color: #00A3E0;
+  flex-shrink: 0;
+}
+
+.servicio-visual-clean {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8fafc;
+  padding: 60px;
+  border-radius: 24px;
+  color: #002b5c;
+  border: 1px solid #edf2f7;
+}
+
+@media (max-width: 968px) {
+  .servicio-row-clean {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+}

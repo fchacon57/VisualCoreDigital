@@ -1,0 +1,37 @@
+/* App.css - ESTILOS GLOBALES Y ESTRUCTURA */
+
+* {
+  box-sizing: border-box !important;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+/* El contenedor maestro que asegura los 1200px en TODO el sitio */
+.container-general {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  display: block !important;
+}
+
+/* Asegura que el contenido de las rutas use todo el espacio disponible */
+.app-container, main {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Resets para que las páginas no tengan márgenes extraños */
+.inicio-page, .servicios-page-container, .qh-page-container {
+  width: 100%;
+}

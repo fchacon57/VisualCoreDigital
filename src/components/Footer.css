@@ -1,0 +1,76 @@
+/* Estilos del Footer - Visual Core Digital */
+
+.main-footer {
+  background-color: #001529; /* Azul muy oscuro para contraste */
+  color: #ffffff;
+  padding: 60px 10% 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 40px;
+}
+
+/* GRUPO DEL LOGO EN FOOTER */
+.footer-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-logo-icon {
+  height: 40px;
+  width: auto;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* Reutilización del color de marca en el título del footer */
+.footer-title .title-highlight {
+  color: #00A3E0;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  max-width: 300px;
+}
+
+/* SECCIONES DE INFO */
+.footer-info h4, .footer-social h4 {
+  color: #00A3E0; 
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-info p, .footer-social a {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #ffffff;
+}
+
+/* PARTE INFERIOR */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}

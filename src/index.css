@@ -1,0 +1,32 @@
+/* Borra todo lo anterior y pega esto */
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* RESET CRÍTICO: Eliminamos el flex del body */
+body {
+  margin: 0;
+  padding: 0;
+  display: block; /* Cambiado de flex a block */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff; /* Aseguramos fondo blanco global */
+  color: #0f172a;
+}
+
+/* Aseguramos que el contenedor de React ocupe todo el ancho */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}

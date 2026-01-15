@@ -1,0 +1,101 @@
+{
+  "hero": {
+    "title": "Ingeniería de Software con Respaldo Senior",
+    "subtitle": "Soluciones tecnológicas robustas diseñadas bajo estándares de alta disponibilidad. Especialistas en arquitecturas modernas, Cloud Computing y metodologías ágiles.",
+    "cta": "Hablemos de su Proyecto"
+  },
+  "about": {
+    "title": "Experiencia que Impulsa la Innovación",
+    "description": "Visual Core Digital nace para transformar desafíos complejos en ventajas competitivas. Nuestro liderazgo cuenta con una trayectoria comprobada en la gestión de ecosistemas críticos, sistemas de suscripción masiva y automatización en la nube, garantizando soluciones escalables y preparadas para el futuro."
+  },
+  "services": [
+    {
+      "id": 1,
+      "title": "Desarrollo Full Stack Enterprise",
+      "description": "Desarrollamos aplicaciones escalables utilizando Java, Python, Node.js y React. Construimos desde CMS corporativos hasta administradores de contratos diseñados para alta demanda."
+    },
+    {
+      "id": 2,
+      "title": "Modernización & Bases de Datos",
+      "description": "Expertos en ecosistemas SQL y NoSQL, incluyendo Oracle, PostgreSQL y MongoDB. Optimizamos el manejo de datos para garantizar velocidad y consistencia en sus aplicaciones."
+    },
+    {
+      "id": 3,
+      "title": "Arquitectura Cloud AWS",
+      "description": "Implementamos soluciones en la nube con AWS Lambda y CloudWatch. Automatizamos procesos críticos y migramos infraestructuras hacia entornos cloud eficientes y seguros."
+    },
+    {
+      "id": 4,
+      "title": "Células Ágiles & DevOps",
+      "description": "Liderazgo de equipos bajo metodología Scrum. Aseguramos lanzamientos continuos y seguros mediante flujos de CI/CD, Docker y herramientas Atlassian."
+    }
+  ],
+  "training": {
+    "title": "Capacitación y Mentoría Senior",
+    "subtitle": "Transferencia de conocimiento especializado para formar células de desarrollo de alto nivel.",
+    "courses": [
+      {
+        "id": 1,
+        "name": "Algoritmos y Lógica con Python",
+        "detail": "Desde fundamentos hasta resolución de problemas complejos y automatización."
+      },
+      {
+        "id": 2,
+        "name": "Ingeniería de Bases de Datos",
+        "detail": "Diseño, modelado y optimización avanzada en ecosistemas Oracle y PostgreSQL."
+      },
+      {
+        "id": 3,
+        "name": "Ingeniería de Software & Requisitos",
+        "detail": "Modelado de datos, gestión de requisitos y arquitecturas robustas bajo estándares de industria."
+      }
+    ]
+  },
+  "queHacemos": {
+    "intro": {
+      "title": "Soluciones Digitales con Sello de Ingeniería",
+      "text": "VisualCore Digital es una consultora especializada en arquitectura backend, integración de sistemas y automatización de procesos para entornos corporativos. No solo escribimos código; diseñamos la continuidad operativa de su negocio."
+    },
+    "problemas": [
+      { "id": 1, "label": "Sistemas fragmentados", "desc": "Plataformas que no se comunican entre sí." },
+      { "id": 2, "label": "Plataformas heredadas", "desc": "Sistemas legacy difíciles de mantener y escalar." },
+      { "id": 3, "label": "Procesos manuales", "desc": "Flujos ineficientes que deberían estar automatizados." },
+      { "id": 4, "label": "Debilidad técnica", "desc": "Falta de arquitectura sólida en aplicaciones críticas." }
+    ],
+    "pilares": [
+      {
+        "title": "Desarrollo de Soluciones",
+        "items": ["Backend robusto (Core)", "Frontend orientado a producto", "APIs y Microservicios"]
+      },
+      {
+        "title": "Integración y Modernización",
+        "items": ["Conexión entre sistemas", "Reducción de deuda técnica", "Automatización de procesos"]
+      },
+      {
+        "title": "Acompañamiento Senior",
+        "items": ["Soporte y evolución", "Toma de decisiones técnicas", "Mantenimiento evolutivo"]
+      }
+    ]
+  },
+  "servicios_detalle": {
+    "title": "Nuestras Áreas de Especialización",
+    "description": "Soluciones de software diseñadas bajo estándares de ingeniería para garantizar escalabilidad y seguridad.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Desarrollo de Software a Medida",
+        "puntos": ["Arquitectura de microservicios", "Aplicaciones escalables en la nube", "Modernización de sistemas core"]
+      },
+      {
+        "id": 2,
+        "title": "Cloud & Infraestructura",
+        "puntos": ["Despliegue en AWS/Azure", "Optimización de bases de datos", "Continuidad operativa"]
+      },
+      {
+        "id": 3,
+        "title": "Ciberseguridad & Auditoría",
+        "puntos": ["Protección de datos críticos", "Cumplimiento de estándares", "Análisis de vulnerabilidades"]
+      }
+    ]
+  }
+}
