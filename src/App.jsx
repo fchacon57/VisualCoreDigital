@@ -4,7 +4,9 @@ import Footer from './components/Footer';
 import Inicio from './pages/Inicio';
 import QueHacemos from './pages/QueHacemos';
 import Servicios from './pages/Servicios';
+import Capacitaciones from './pages/Capacitaciones';
 import './App.css';
+
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
             <Route path="/" element={<Inicio />} />
             <Route path="/que-hacemos" element={<QueHacemos />} />
             <Route path="/servicios" element={<Servicios />} />
-            {/* Próximamente: Servicios y Capacitaciones */}
+            <Route path="/capacitaciones" element={<Capacitaciones />} />
           </Routes>
         </main>
 

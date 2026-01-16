@@ -1,0 +1,114 @@
+/* Capacitaciones.css */
+
+.capacitaciones-page {
+  width: 100%;
+}
+
+/* HERO DE CAPACITACIONES */
+.cap-hero {
+  padding: 100px 0 60px;
+  background-color: #ffffff; /* Cambiado de azul a blanco */
+  color: #0f172a;            /* Texto oscuro para que se vea */
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9; /* Línea sutil de separación */
+}
+
+.cap-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #002b5c; /* Azul corporativo para el título */
+}
+
+.cap-hero p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #475569; /* Gris profesional para el subtítulo */
+  opacity: 1;
+}
+
+/* GRID DE CURSOS */
+.courses-grid {
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.course-card-premium {
+  background: white;
+  border-radius: 15px;
+  padding: 35px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card-premium:hover {
+  transform: translateY(-5px);
+  border-color: #00A3E0;
+  box-shadow: 0 10px 30px rgba(0, 163, 224, 0.1);
+}
+
+.course-icon-wrapper {
+  color: #00A3E0;
+  margin-bottom: 20px;
+}
+
+.course-card-premium h3 {
+  color: #002b5c;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.course-card-premium p {
+  color: #64748b;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* BANNER DE CONSULTORÍA (Reutilizando el estilo del badge pero adaptado) */
+.cap-consulting-banner {
+  margin: 60px auto;
+  padding: 40px;
+  background: #f8fafc;
+  border-radius: 20px;
+  border-left: 5px solid #00A3E0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.course-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00A3E0;
+  font-weight: 600;
+}
+
+.banner-content h4 {
+  color: #002b5c;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.banner-content p {
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+.courses-section {
+  background-color: #f8fafc; /* Un fondo gris casi imperceptible para que las tarjetas blancas resalten */
+  padding: 20px 0 80px;
+}
+
+@media (max-width: 768px) {
+  .cap-hero h1 { font-size: 2.5rem; }
+  .cap-consulting-banner { flex-direction: column; text-align: center; }
+}

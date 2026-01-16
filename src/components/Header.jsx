@@ -21,6 +21,9 @@ const Header = () => {
         <NavLink to="/servicios" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}       >
           Servicios
         </NavLink>
+        <NavLink to="/capacitaciones" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>
+          Capacitaciones
+        </NavLink>
         {/* Los demás por ahora pueden ser <a> normales o estar desactivados */}
         <button className="btn-contact">Contáctenos</button>
       </div>
