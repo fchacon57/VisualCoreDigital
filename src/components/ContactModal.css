@@ -115,6 +115,31 @@
   background: #002b5c;
 }
 
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.success-message h3 {
+  color: #002b5c;
+  margin-top: 20px;
+}
+
+.btn-submit:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Estilos de inputs se mantienen igual que el paso anterior... */
 .input-group { margin-bottom: 18px; display: flex; flex-direction: column; }
 .input-group label { font-weight: 600; margin-bottom: 6px; color: #002b5c; font-size: 0.9rem; text-align: left; }
