@@ -8,7 +8,11 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
-    telefono: '',
+    telefono: {
+      codigoPais: '',
+      prefijo: '',
+      numero: ''
+    },
     empresa: '',
     descripcion: ''
   });
