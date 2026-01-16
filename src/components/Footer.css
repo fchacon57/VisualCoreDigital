@@ -1,13 +1,15 @@
 /* Estilos del Footer - Visual Core Digital */
 
 .main-footer {
-  background-color: #001529; /* Azul muy oscuro para contraste */
+  background-color: #001529; /* Azul muy oscuro */
   color: #ffffff;
-  padding: 60px 10% 20px;
+  padding: 60px 0 30px; /* Padding vertical, el horizontal lo da el container-general */
+  width: 100%;
 }
 
 .footer-container {
   display: grid;
+  /* En desktop: 3 columnas, en tablet/movil: se ajustan solas */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -33,7 +35,6 @@
   color: #ffffff;
 }
 
-/* Reutilización del color de marca en el título del footer */
 .footer-title .title-highlight {
   color: #00A3E0;
 }
@@ -47,7 +48,7 @@
 
 /* SECCIONES DE INFO */
 .footer-info h4, .footer-social h4 {
-  color: #00A3E0; 
+  color: #00A3E0;
   margin-bottom: 20px;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -70,7 +71,37 @@
 /* PARTE INFERIOR */
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 30px;
   font-size: 0.85rem;
   color: #94a3b8;
+}
+
+/* --- SECCIÓN MOBILE --- */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Una sola columna en celulares */
+    text-align: center;         /* Centramos todo el contenido */
+    gap: 30px;
+  }
+
+  .footer-logo-group {
+    justify-content: center;    /* Centramos el logo en móvil */
+  }
+
+  .footer-tagline {
+    margin: 0 auto;             /* Centramos el párrafo */
+  }
+
+  .footer-info p, .footer-social a {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding-top: 20px;
+  }
 }

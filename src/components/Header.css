@@ -94,3 +94,67 @@
   color: #002b5c !important;  /* El texto se vuelve azul oscuro */
   transform: translateY(-2px);
 }
+
+/* Este botón existe en el HTML pero el navegador no le asigna espacio ni color en Desktop */
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- ESTO ACTIVA EL BOTÓN EN MÓVIL --- */
+@media (max-width: 768px) {
+  /* 1. Asegura que el navbar distribuya logo e icono a los extremos */
+  .navbar {
+    padding: 0 20px; /* Un poco de aire a los lados */
+    position: relative;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+    color: #ffffff;
+    z-index: 1100;
+  }
+
+  /* 2. Estilo del panel desplegable */
+  .nav-menu {
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 95px; /* Aparece justo debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #002b5c; /* Mismo azul del header */
+    padding: 30px 20px;
+    gap: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* 3. Cuando el menú está abierto */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  /* 4. Ajuste de los links en móvil */
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea divisoria sutil */
+    width: 100%;
+  }
+
+  .nav-link.active::after {
+    display: none; /* Quitamos la rayita azul de desktop en móvil */
+  }
+
+  /* 5. El botón de contacto en móvil */
+  .btn-contact {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}

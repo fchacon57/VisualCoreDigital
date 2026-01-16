@@ -35,3 +35,20 @@ html, body {
 .inicio-page, .servicios-page-container, .qh-page-container {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 15px 20px;
+    flex-wrap: wrap; /* Permite que el menú baje si no hay espacio */
+  }
+
+  .nav-menu {
+    display: none; /* Por ahora lo ocultamos para que no rompa el diseño */
+    /* Nota: Aquí es donde normalmente implementarías un botón de 'Menú' */
+  }
+
+  .nav-title {
+    font-size: 1.2rem; /* Achicamos un poco el logo en móvil */
+  }
+}
