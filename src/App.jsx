@@ -7,6 +7,7 @@ import QueHacemos from './pages/QueHacemos';
 import Servicios from './pages/Servicios';
 import Capacitaciones from './pages/Capacitaciones';
 import ContactModal from './components/ContactModal';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         {/* Pasamos la función openModal al Header para el botón del menú */}
         <Header onContactClick={openModal} /> 
