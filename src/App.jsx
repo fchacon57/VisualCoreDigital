@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Importamos useState
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -6,7 +6,7 @@ import Inicio from './pages/Inicio';
 import QueHacemos from './pages/QueHacemos';
 import Servicios from './pages/Servicios';
 import Capacitaciones from './pages/Capacitaciones';
-import ContactModal from './components/ContactModal'; // Importamos el nuevo Modal
+import ContactModal from './components/ContactModal';
 import './App.css';
 
 function App() {
@@ -19,12 +19,14 @@ function App() {
   return (
     <Router>
       <div className="app-container">
-        {/* Pasamos la función openModal al Header */}
+        {/* Pasamos la función openModal al Header para el botón del menú */}
         <Header onContactClick={openModal} /> 
         
         <main>
           <Routes>
-            <Route path="/" element={<Inicio />} />
+            {/* CORRECCIÓN: Ahora Inicio recibe la función para abrir el modal desde el Hero */}
+            <Route path="/" element={<Inicio onContactClick={openModal} />} />
+            
             <Route path="/que-hacemos" element={<QueHacemos />} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/capacitaciones" element={<Capacitaciones />} />
@@ -33,7 +35,7 @@ function App() {
 
         <Footer />
 
-        {/* El Modal se renderiza aquí y espera a ser activado */}
+        {/* El Modal se mantiene aquí, escuchando el estado isModalOpen */}
         <ContactModal 
           isOpen={isModalOpen} 
           onClose={closeModal} 

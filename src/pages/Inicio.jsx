@@ -1,9 +1,10 @@
 import React from 'react';
-import { CheckCircle, BookOpen, Database, Code, Cloud, Shield, Server, Cpu, GraduationCap, Microscope } from 'lucide-react'; 
+import { CheckCircle, Code, Cloud, Shield, Cpu, GraduationCap, Microscope } from 'lucide-react'; 
 import content from '../content.json';
-import './Inicio.css'; // <-- IMPORTANTE: Importar el nuevo CSS
+import './Inicio.css';
 
-const Inicio = () => {
+// Recibimos onContactClick como prop desde App.jsx
+const Inicio = ({ onContactClick }) => {
   const iconMap = {
     1: <Code size={40} />,
     2: <Cloud size={40} />,
@@ -18,7 +19,14 @@ const Inicio = () => {
           <div className="container-general">
             <h1 className="hero-title">{content.hero.title}</h1>
             <p className="hero-subtitle">{content.hero.subtitle}</p>
-            <button className="cta-main">{content.hero.cta}</button>
+            
+            {/* Vinculamos el click al disparador del modal */}
+            <button 
+              className="cta-main" 
+              onClick={onContactClick}
+            >
+              {content.hero.cta}
+            </button>
           </div>
         </section>
 
@@ -62,6 +70,7 @@ const Inicio = () => {
           </div>
         </section>
 
+        {/* TRAINING SECTION */}
         <section className="training-section" id="capacitaciones">
           <div className="container-general">
             <div className="training-header">
@@ -90,7 +99,6 @@ const Inicio = () => {
             </div>
           </div>
         </section>
-
     </div>
   );
 };
