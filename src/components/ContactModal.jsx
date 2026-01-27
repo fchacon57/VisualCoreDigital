@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { X, CheckCircle, Loader2 } from 'lucide-react'; // Importamos Loader2 para el spinner
+import { X, CheckCircle } from 'lucide-react';
 import './ContactModal.css';
 import { API_BASE_URL } from '../config/api';
 
@@ -45,6 +45,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     setIsSubmitting(true);
 
     try {
+      // Petición al Backend dockerizado (localhost porque el navegador está fuera del contenedor)
       const response = await fetch(`${API_BASE_URL}/api/contacto`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -54,6 +55,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       const data = await response.json();
 
       if (response.ok) {
+        // ÉXITO: Mostramos feedback visual
         setShowSuccess(true);
         setFormData(initialFormState);
         
@@ -62,12 +64,15 @@ const ContactModal = ({ isOpen, onClose }) => {
           onClose();
         }, 2500);
       } else {
+        // ERROR CONTROLADO: (Ej: Bloqueo por Spam/Rate Limit o error de validación del server)
+        // Buscamos el mensaje en 'data.error' o 'data.message' según como responda el backend
         const errorMsg = data.error || data.message || "Hubo un error al procesar tu solicitud.";
         alert(errorMsg);
       }
     } catch (error) {
+      // ERROR DE RED: (Ej: El contenedor de backend está apagado)
       console.error("Error de conexión:", error);
-      alert("No se pudo conectar con el servidor. Verifica tu conexión a internet.");
+      alert("No se pudo conectar con el servidor. Verifica que los servicios de Docker estén activos.");
     } finally {
       setIsSubmitting(false);
     }
@@ -181,16 +186,8 @@ const ContactModal = ({ isOpen, onClose }) => {
                   type="submit" 
                   className="btn-submit" 
                   disabled={isSubmitting}
-                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px' }}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="animate-spin" size={20} />
-                      Enviando...
-                    </>
-                  ) : (
-                    "Enviar Mensaje"
-                  )}
+                  {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
                 </button>
               </div>
             </form>
