@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import axios from 'axios';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Inicio from './pages/Inicio';
@@ -12,6 +13,26 @@ import './App.css';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Despertador de servidores (Ping)
+  useEffect(() => {
+    const wakeUpServers = async () => {
+      const backendUrl = "https://visualcore-backend.onrender.com/";
+      const msNotificationsUrl = "https://ms-notifications-7xyw.onrender.com/";
+      
+      try {
+        await Promise.all([
+          axios.get(backendUrl),
+          axios.get(msNotificationsUrl)
+        ]);
+        console.log("Servidores Visual Core despertando...");
+      } catch (error) {
+        // Se ignoran errores de respuesta ya que el objetivo es solo activar el contenedor
+      }
+    };
+
+    wakeUpServers();
+  }, []);
 
   // Funciones para controlar el modal
   const openModal = () => setIsModalOpen(true);
